@@ -77,13 +77,5 @@ export default merge(baseConfig, [
     },
     external: [ 'edgedb' ],
     plugins: [ typescript(), baseConfig.developmentMode && terser() ]
-  },
-  {
-    input: 'build/compiled/examples/hello_edgedb.js',
-    output: {
-        dir: 'lib/examples/',
-        format: 'cjs',
-        sourcemap: true
-    },
   }
 ]);
