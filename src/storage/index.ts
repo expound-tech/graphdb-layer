@@ -1,9 +1,9 @@
 import edgedbClient from './edgedb/client';
 
 export default {
-  query: async function (sql: string) {
+  query: async (sql: string) => {
   
     const result = await edgedbClient.query(sql)
-    console.log(result); 
+    return result
   }
 }

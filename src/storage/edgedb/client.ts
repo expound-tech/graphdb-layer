@@ -1,3 +1,3 @@
-const edgedb = require("edgedb");
+import * as edgedb from 'edgedb';
 
 export default edgedb.createClient();
