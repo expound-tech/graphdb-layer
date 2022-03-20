@@ -1,3 +1,3 @@
-import * as edgedb from 'edgedb';
+import { createClient } from 'edgedb';
 
-export default edgedb.createClient();
+export default createClient();
