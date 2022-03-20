@@ -62,20 +62,20 @@ export default merge(baseConfig, [
   {
     input: 'build/compiled/index.d.ts',
     output: {
-        file: 'lib/dts/api.d.ts',
-        format: 'es'
+        file: 'lib/index.d.ts',
+        format: 'cjs'
     },
     plugins: [ dts() ]
   },
   {
     input: 'src/index.ts',
     output: {
-        file: 'lib/graphdb-layer.js',
+        file: 'lib/index.js',
         format: 'cjs',
         name: 'graphdb_layer',
         sourcemap: true
     },
     external: [ 'edgedb' ],
-    plugins: [ typescript(), baseConfig.developmentMode && terser() ]
+    plugins: [ typescript(), terser() ]
   }
 ]);

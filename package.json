@@ -1,15 +1,14 @@
 {
   "name": "graphdb-layer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "集成图数据库的 JS 客户端，为知识管理应用提供统一访问层和基础设施",
   "author": "Lonexw <lone@yousails.com>",
   "keywords": [
     "graphdb",
     "edgedb"
   ],
-  "main": "lib/graph-layer.js",
-  "module": "commonjs",
-  "types": "lib/dts/api.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
@@ -19,13 +18,12 @@
     "_make-bundle": "rollup --config",
     "compile": "tsc",
     "test": "jest --config jestconfig.json",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "api": "api-extractor run --local --verbose",
     "build": "run-s _clear _tsc _make-bundle",
     "prepare": "yarn run build",
     "prepublishOnly": "yarn test && yarn run lint",
-    "version": "yarn run format && git add -A src",
+    "version": "git add -A src",
     "postversion": "git push && git push --tags"
   },
   "repository": {
