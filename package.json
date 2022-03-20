@@ -9,7 +9,7 @@
   ],
   "main": "lib/graph-layer.js",
   "module": "commonjs",
-  "typings": "lib/dts/api.d.ts",
+  "types": "lib/dts/api.d.ts",
   "files": [
     "lib/**/*"
   ],
