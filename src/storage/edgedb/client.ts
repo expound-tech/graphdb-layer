@@ -1,3 +1,4 @@
-import { createClient } from 'edgedb';
+import * as edgedb from 'edgedb';
 
-export default createClient();
+const client = edgedb.createClient();
+export default client;

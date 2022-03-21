@@ -71,11 +71,11 @@ export default merge(baseConfig, [
     input: 'src/index.ts',
     output: {
         file: 'lib/index.js',
-        format: 'cjs',
+        format: 'es',
         name: 'graphdb_layer',
         sourcemap: true
     },
     external: [ 'edgedb' ],
-    plugins: [ typescript(), terser() ]
+    plugins: [ typescript(), baseConfig.developmentMode && terser() ]
   }
 ]);
