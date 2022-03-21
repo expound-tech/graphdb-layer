@@ -1,6 +1,6 @@
 {
   "name": "graphdb-layer",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "集成图数据库的 JS 客户端，为知识管理应用提供统一访问层和基础设施",
   "author": "Lonexw <lone@yousails.com>",
   "keywords": [
